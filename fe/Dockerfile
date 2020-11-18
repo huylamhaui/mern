@@ -14,7 +14,7 @@ FROM nginx
 
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
-COPY --from=build-stage /usr/app/app/build .
+COPY --from=build-stage /usr/app/app/fe/build .
 
 
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
