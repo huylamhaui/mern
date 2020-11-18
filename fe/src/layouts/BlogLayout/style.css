@@ -1,0 +1,12 @@
+.blog-layout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.blog-content {
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+    background-color: gray;
+}
