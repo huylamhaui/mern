@@ -14,7 +14,7 @@ server.use(auth.authMiddleware);
 
 server.use(swaggerRouter);
 server.use('/accounts', accountRouter);
-server.use(authRouter);
+server.use('/api/auth',authRouter);
 
 server.listen(3000, () => {
     console.log('server listening')
