@@ -20,10 +20,9 @@ const login = (req, res) => {
                     })
                 }
             }else {
-                return res.json({
-                    token: auth.generateToken(data),
-                    user: data
-                })
+                return res.status(400).json({
+                    errorMessage: "bad credentical"
+                });
             }
         })
         .catch(err => {
