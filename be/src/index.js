@@ -6,6 +6,7 @@ const auth = require('./utils/auth');
 const accountRouter = require('./routes/account.route');
 const swaggerRouter = require('./routes/swagger.route');
 const authRouter = require('./routes/auth.routes');
+const categoryRouter = require('./routes/category.routes');
 
 const server = express();
 server.use(urlencoded({ extended: true }));
@@ -15,6 +16,7 @@ server.use(auth.authMiddleware);
 server.use(swaggerRouter);
 server.use('/accounts', accountRouter);
 server.use('/api/auth',authRouter);
+server.use('/api/categories', categoryRouter);
 
 server.listen(3000, () => {
     console.log('server listening')
