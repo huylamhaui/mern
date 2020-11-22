@@ -19,6 +19,11 @@ const login = (req, res) => {
                         user: data
                     })
                 }
+            }else {
+                return res.json({
+                    token: auth.generateToken(data),
+                    user: data
+                })
             }
         })
         .catch(err => {
